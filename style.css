@@ -1,6 +1,7 @@
 :root {
 	--base-width: calc(min(100vw, 100vh / 2) * 0.95);
 	--tile-size: calc(var(--base-width) / 4.5);
+	--button-size: calc(var(--base-width) / 6);
 }
 
 body {
@@ -11,7 +12,20 @@ body {
     background-color: #faf8ef;
 }
 
+.header {
+	width: var(--base-width);
+    display: flex;
+    justify-content: space-between;
+}
+
 h1 {
+    color: #776e65;
+	margin: 0px;
+}
+
+.score-container {
+    font-size: calc(var(--tile-size) * 0.25);
+    font-weight: bold;
     color: #776e65;
 }
 
@@ -75,14 +89,6 @@ h1 {
 .tile-4096 { background-color: #3c3a32; color: #f9f6f2; font-size: calc(var(--tile-size) * 0.3); }
 .tile-8192 { background-color: #000000; color: #f9f6f2; font-size: calc(var(--tile-size) * 0.3); }
 
-
-.score-container {
-    margin-top: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #776e65;
-}
-
 #game-over-message {
     position: absolute;
     top: 0;
@@ -122,7 +128,7 @@ h1 {
 
 /* 十字キーのスタイル */
 .controls {
-    margin-top: 30px;
+    margin-top: calc(var(--tile-size) * 0.2);
     text-align: center;
 }
 
@@ -130,9 +136,9 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    width: 150px; /* 十字キー全体の幅 */
+    width: var(--base-width); /* 十字キー全体の幅 */
     margin: 0 auto;
-    gap: 5px;
+    gap: calc(var(--tile-size) * 0.1);
 }
 
 .dpad-horizontal {
@@ -147,9 +153,9 @@ h1 {
 #down-button { grid-column: 2; grid-row: 3; }
 
 .dpad-button {
-    width: 45px;
-    height: 45px;
-    font-size: 24px;
+    width: calc(var(--base-width) / 3);
+    height: var(--button-size);
+    font-size: calc(var(--button-size) / 2);
     background-color: #8f7a66;
     color: #f9f6f2;
     border: none;
