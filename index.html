@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<h1>2048</h1>
+		<div class="score-container">
+			<div class="current-container">
+				Score: <span id="score">0</span>
+			</div>
+			<div class="best-score-container">
+				Best Score: <span id="best-score">0</span>
+			</div>
+		</div>
+	</div>
+
+    <div class="game-container">
+        <div id="game-board"></div>
+        <div id="game-over-message" class="hidden">
+            Game Over!
+            <button id="restart-button">Restart</button>
+        </div>
+    </div>
+
+    <div class="controls">
+        <h2>Controls</h2>
+        <div class="dpad">
+            <button id="up-button" class="dpad-button">▲</button>
+            <div class="dpad-horizontal">
+                <button id="left-button" class="dpad-button">◀</button>
+                <button id="right-button" class="dpad-button">▶</button>
+            </div>
+            <button id="down-button" class="dpad-button">▼</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
